@@ -1,46 +1,73 @@
-# Getting Started with Create React App
+# Deribit Price Chart
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A real-time price chart for the BTC-PERPETUAL instrument on Deribit, built with React and Lightweight Charts.
 
-## Available Scripts
+## Table of Contents
 
-In the project directory, you can run:
+- [Features](#features)
+- [Technologies](#technologies)
+- [Getting Started](#getting-started)
+- [Usage](#usage)
+- [File Structure](#file-structure)
+
+## Features
+
+- Real-time updates of mark price and last price.
+- Interactive chart using Lightweight Charts.
+- Responsive design that adapts to different screen sizes.
+
+## Technologies
+
+- **React**: A JavaScript library for building user interfaces.
+- **Lightweight Charts**: A library for creating interactive financial charts.
+- **TypeScript**: A superset of JavaScript that adds static types.
+- **WebSocket**: For real-time communication with the Deribit API.
+
+## Getting Started
+
+To get a local copy up and running, follow these steps:
+
+1. **Clone the repository**:
+
+### `git clone https://github.com/GiacomoSorbiWork/BTC-price-tracker.git`
+
+2. **Navigate to the project directory**:
+
+### `cd deribit-price-chart`
+
+3. **Install dependencies**:
+
+### `npm install`
+
+4. **Setup environment variables**:
+
+### `DERIBIT_WS_URL=wss://test.deribit.com/ws/api/v2`
+
+5. **Run the application**:
 
 ### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+Your application will be running on http://localhost:3000
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Usage
 
-### `npm test`
+Once the application is running, you will see a chart displaying the current mark price and last price for the BTC-PERPETUAL instrument. The chart updates in real-time as new data is received from the Deribit WebSocket.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## File Structure
 
-### `npm run build`
+/deribit-price-chart
+├── /public
+│   └── index.html
+├── /src
+│   ├── /components
+│   │   └── PriceChart.tsx
+│   ├── /json-rpc
+│   │   └── DeribitSocket.ts
+│   ├── App.tsx
+│   ├── index.tsx
+│   └── App.css
+├── .env
+├── package.json
+└── README.md
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
