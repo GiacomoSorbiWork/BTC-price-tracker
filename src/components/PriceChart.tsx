@@ -15,7 +15,7 @@ const PriceChart: React.FC = () => {
     const screenHeight = window.innerHeight;
     return {
       width: screenWidth - 50,
-      height: screenHeight - 50,
+      height: screenHeight - 100,
     };
   };
 
@@ -100,7 +100,7 @@ const PriceChart: React.FC = () => {
 
   return (
     <div>
-      <div style={{ display: 'flex', gap: '20px' }}>
+      <div style={{ display: 'flex', }}>
         <h4>BTC-PERPETUAL
           <span 
               className='mark-price'
@@ -110,7 +110,7 @@ const PriceChart: React.FC = () => {
           </span>
         </h4>
       </div>
-      <div ref={chartContainerRef} style={{ width: '100%', height: '400px' }} />
+      <div ref={chartContainerRef} style={{ width: '100%'}} />
     </div>
   );
 };
